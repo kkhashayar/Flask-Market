@@ -1,0 +1,43 @@
+<!-- Selling modal -->
+
+<style>
+	.modal-content{
+		background-color: #949184;
+	}
+</style>
+
+<div class="modal fade" id="Modal-SellConfirm-{{item.id}}"
+	 tabindex="-1"
+	 aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 <div class="modal-dialog">
+	 	<div class="modal-content">
+	 		<div class="modal-header">
+	 			<h5 style="color:black; " class="modal-title" id="ModalLabel">
+	 				{{item.name}}	
+	 			</h5>
+	 			<button type="button" class="close"
+	 					data-dismiss="modal" aria-label="close">
+	 				<span aria-hiden="true">x</span>
+	 			</button>
+	 		</div>
+	 		<div class="modal-body">
+	 			<form method="POST">
+	 				{{ sell_form.hidden_tag() }}
+
+	 				<h4 class="text-center" style="color: black;">
+	 					Sell {{item.name}} for price {{item.price}} NOK?
+	 				</h4>
+	 				<br>
+	 				<input id="sold_item" name="sold_item" type="hidden" value="{{item.id}}">
+	 				{{ sell_form.submit(class="btn btn-outline-danger btn-block")}}
+	 			</form>
+	 		</div>
+	 		<div class="modal-footer">
+	 			<button type="button" class="btn btn-secondary"
+	 					data-dismiss="modal">Close
+	 				
+	 			</button>
+	 		</div>
+	 	</div> 	
+	 </div>	
+</div>
