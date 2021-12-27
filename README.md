@@ -19,4 +19,6 @@ api/ver0.1/items (GET)
 
 api/ver0.1/items/ (GET, POST, PUT, DELETE)
 
+Note: API works directly with MySQL
+
 
