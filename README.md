@@ -1,11 +1,22 @@
 # Flask-Market
-Simple Online market system, Flask, Flask-SQLAlchemy, Bootstrap 
-For market system, connect to your Database, create database from models.
-.API works diectly with MySQL 
 
-.API URLs starts with /api/ver0.1/
 
-/api/ver0.1/items
+Simple Online market application.
 
-/api/ver0.1/items/name (GET, POST, PUT, DELETE) 
+Language: Python, SQL
+
+Framework: Flask
+
+Database: Mysql
+
+ORM: Flask-SQLAlchemy
+
+Front-end: Bootstrap
+
+API urls:
+
+api/ver0.1/items (GET)
+
+api/ver0.1/items/ (GET, POST, PUT, DELETE)
+
 
