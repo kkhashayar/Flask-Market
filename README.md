@@ -19,6 +19,7 @@ api/ver0.1/items (GET)
 
 api/ver0.1/items/ (GET, POST, PUT, DELETE)
 
-Note: API works directly with MySQL
+Note: API works directly with MySQL.
+Note: Ti use API, first login to market. 
 
 
