@@ -12,12 +12,10 @@ from mysql.connector import Error
 from random import randrange
 ##########################
 
-
 @app.route("/")
 # @app.route("/home")
 def home():
 	return redirect(url_for("market"))
-
 
 @app.route("/market", methods=["GET", "POST"])
 @login_required
@@ -64,7 +62,6 @@ def market():
 def about():
 	return render_template("about.html")
 
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
 	form = RegisterForm()
@@ -88,7 +85,6 @@ def register():
 			print(type(err_msg))
 	return render_template("register.html", form=form)
 
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
 	form = LoginForm()
@@ -106,9 +102,7 @@ def login():
 		else:
 			flash("Username or password Not match", category="danger")
 
-
 	return render_template("login.html", form=form)
-
 
 @app.route("/logout")
 def logout():
@@ -118,7 +112,6 @@ def logout():
 
 #############################################################
 #-- API routes 
-
 connection = mysql.connector.connect(host="localhost",
                                      database="market",
                                      user="root",
@@ -150,7 +143,6 @@ def api_get_item(name):
         cur.close()
         return {"msg": "Item inserted"}
 
-
     elif request.method == "PUT":
         try:
             input_body = request.get_json()
@@ -170,7 +162,6 @@ def api_get_item(name):
             return {"msg": "Item Updated"}
         except Error:
             return{"msg": Error}
-
 
     elif request.method == "GET":
         cur = connection.cursor(dictionary=True)
